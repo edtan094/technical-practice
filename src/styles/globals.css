@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.chevron {
+  width: 20px;
+  height: 20px;
+}
+
+.house-image {
+  width: 13rem;
+  height: 100%;
+}
