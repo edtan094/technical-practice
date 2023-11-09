@@ -1,5 +1,6 @@
 import type { NextPage } from "next"
 import Head from "next/head"
+import homes from "../../data/homes.json"
 import Property from "../components/Property"
 import styles from "../styles/Home.module.css"
 
@@ -13,8 +14,12 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Property />
+      <main className="p-10 justify-between">
+        <div className="flex flex-col lg:flex-row justify-between">
+          {homes.map((home) => {
+            return <Property home={home} />
+          })}
+        </div>
       </main>
     </div>
   )

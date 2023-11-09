@@ -1,22 +1,31 @@
 import { ChevronRightIcon } from "@heroicons/react/24/solid"
+import { House } from "../types"
 
-export default function Property() {
+export default function Property({ home }: { home: House }) {
   return (
-    <div className="card w-52 h-96 bg-white shadow-xl">
-      <figure className="house-image">
+    <div className="card w-64 h-96 bg-white shadow-xl md:m-auto">
+      <figure>
         <img
-          src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-          alt="Shoes"
+          src="https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg"
+          alt="House"
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Primary Address</h2>
-        <p>Rest of Address</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">
-            <ChevronRightIcon className="chevron" />
-          </button>
+        <div className=" flex">
+          <div className="w-3/4">
+            <h2 className="card-title">{home.address}</h2>
+            <p>
+              {home.city} {home.state} {home.zipCode}
+            </p>
+          </div>
+          <div className="w-1/4">
+            <button className="btn btn-primary">
+              <ChevronRightIcon className="chevron" />
+            </button>
+          </div>
         </div>
+
+        <div className="card-actions justify-end"></div>
       </div>
     </div>
   )
