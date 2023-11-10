@@ -3,7 +3,7 @@ import { House } from "../types"
 
 export default function Property({ home }: { home: House }) {
   return (
-    <div className="card w-64 h-96 bg-white shadow-xl md:m-auto">
+    <div className="card w-64 h-96 bg-white shadow-xl mx-auto mb-3">
       <figure>
         <img
           src="https://img.freepik.com/free-photo/blue-house-with-blue-roof-sky-background_1340-25953.jpg"
